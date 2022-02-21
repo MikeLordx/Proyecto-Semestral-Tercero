@@ -1,0 +1,12 @@
+* Movimiento en horizontal y vertical con W, A, S, D
+* Salto para alcanzar plataformas altas con Espacio
+* Correr con Shift para huir de las bestias
+* Globos de dialogo
+* Mapa de prueba
+* Recoger objetos tipo llave para explorar las casas de la ciudad en la que se estara viviendo
+* Primeros puzzles para pasar niveles
+* Añadir primero enemigos con cubos
+* Inicios de la mecanica de vida o cordura
+* Coleccion de almas de bestias
+* Objetos tipos carta para recuerdos de la enfermedad del personaje principal
+* Primer prototipo o modelo de arma para recoger almas
