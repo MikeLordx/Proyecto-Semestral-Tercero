@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     {
         controller = gameObject.AddComponent<CharacterController>();
     }
-    
+
     void Update()
     {
         isitGrounded = controller.isGrounded;
@@ -32,6 +32,16 @@ public class PlayerMovement : MonoBehaviour
             gameObject.transform.forward = move;
         }
 
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            speed = 15;
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            speed = 5;
+        }
+        
         if (Input.GetButtonDown("Jump") && isitGrounded)
         {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravity);
