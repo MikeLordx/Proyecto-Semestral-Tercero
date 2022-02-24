@@ -4,50 +4,24 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public CharacterController controller;
-    private Vector3 playerVelocity;
-    private bool isitGrounded;
-    public float speed = 5;
-    public float jumpHeight = 1f;
-    public float gravity = -9.81f;
+    [SerializeField] private CharacterController _controller;
+    [SerializeField] private Transform cam;
+    [SerializeField] private float _speed = 6f;
+    [SerializeField] private float _turnTime = 0.1f;
+    float _turnVelocity;
 
-    private void Start()
+    private void Update()
     {
-        controller = gameObject.AddComponent<CharacterController>();
-    }
-
-    void Update()
-    {
-        isitGrounded = controller.isGrounded;
-        if (isitGrounded && playerVelocity.y < 0)
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+        if(direction.magnitude >= 0.1f)
         {
-            playerVelocity.y = 0f;
+            float targAngle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg + cam.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targAngle, ref _turnVelocity, _turnTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            Vector3 movingDir = Quaternion.Euler(0f, targAngle, 0f) * Vector3.forward;
+            _controller.Move(movingDir.normalized * _speed * Time.deltaTime);
         }
-
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        controller.Move(move * Time.deltaTime * speed);
-
-        if (move != Vector3.zero)
-        {
-            gameObject.transform.forward = move;
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            speed = 15;
-        }
-
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            speed = 5;
-        }
-        
-        if (Input.GetButtonDown("Jump") && isitGrounded)
-        {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravity);
-        }
-
-        playerVelocity.y += gravity * Time.deltaTime;
-        controller.Move(playerVelocity * Time.deltaTime);
     }
 }
