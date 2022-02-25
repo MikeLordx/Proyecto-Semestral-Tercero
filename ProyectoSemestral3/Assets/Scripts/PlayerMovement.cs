@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform cam;
     [SerializeField] private float _speed = 6f;
     [SerializeField] private float _turnTime = 0.1f;
+    [SerializeField] float _directionDeadZone = 0.1f;
     float _turnVelocity;
 
     private void Update()
@@ -15,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
-        if(direction.magnitude >= 0.1f)
+        if (direction.magnitude >= _directionDeadZone)
         {
             float targAngle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targAngle, ref _turnVelocity, _turnTime);
@@ -24,4 +25,7 @@ public class PlayerMovement : MonoBehaviour
             _controller.Move(movingDir.normalized * _speed * Time.deltaTime);
         }
     }
+
+
+
 }
