@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class ItemController : MonoBehaviour
 {
-    [SerializeField] private Item item;
+    public Item item;
 
 }

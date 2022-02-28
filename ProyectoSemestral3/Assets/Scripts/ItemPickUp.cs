@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemPickUp : MonoBehaviour
 {
-    [SerializeField] public Item Item;
+    public Item Item;
 
     void Pickup()
     {
