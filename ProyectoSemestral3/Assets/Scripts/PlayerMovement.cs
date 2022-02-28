@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
             _controller.Move(movingDir.normalized * _speed * Time.deltaTime);
         }
     }
-
-
-
 }
+
+
