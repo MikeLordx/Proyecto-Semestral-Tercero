@@ -1,14 +1,12 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
     public List<Item> items = new List<Item>();
     public Transform _itemContent;
-    public GameObject _inventoryItem;
+    public InventoryView _inventoryViewerItemPrefab;
 
     private void Awake()
     {
@@ -34,12 +32,8 @@ public class InventoryManager : MonoBehaviour
 
         foreach (var item in items)
         {
-            GameObject obj = Instantiate(_inventoryItem, _itemContent);
-            var itemName = obj.transform.Find("Text").GetComponent<Text>();
-            var itemIcon = obj.transform.Find("ItemImage").GetComponent<Image>();
-
-            itemName.text = item.itemName;
-            itemIcon.sprite = item.icon;
+            InventoryView itemView = Instantiate(_inventoryViewerItemPrefab, _itemContent);
+            itemView.Initialize(item);
         }
     }
 
