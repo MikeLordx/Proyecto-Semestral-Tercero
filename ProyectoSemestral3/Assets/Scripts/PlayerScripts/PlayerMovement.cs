@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private CharacterController _controller;
     [SerializeField] private Transform cam;
     [SerializeField] private float _speed = 6f;
+    private float _runningSpeed = 12f;
+    private float _speedDecrement = 6f;
     [SerializeField] private float _turnTime = 0.1f;
     [SerializeField] float _directionDeadZone = 0.1f;
     float _turnVelocity;
@@ -24,6 +26,15 @@ public class PlayerMovement : MonoBehaviour
             Vector3 movingDir = Quaternion.Euler(0f, targAngle, 0f) * Vector3.forward;
             _controller.Move(movingDir.normalized * _speed * Time.deltaTime);
         }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            _speed = _runningSpeed;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            _speed = _speedDecrement;
+        }
+        
     }
 
 
