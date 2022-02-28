@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _speed = 6f;
     [SerializeField] private float _turnTime = 0.1f;
     [SerializeField] float _directionDeadZone = 0.1f;
-    float _turnVelocity;
+    float _turnVelocity = 0f;
 
     private void Update()
     {
