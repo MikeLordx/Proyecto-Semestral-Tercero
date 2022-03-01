@@ -3,8 +3,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private int _maxHealth = 100;
-    [SerializeField] private int _currentHealth;
-    public HealthBarScript _healthBar;
+    [SerializeField] private int _currentHealth = default;
+    [SerializeField] private HealthBarScript _healthBar = default;
 
     private void Start()
     {
@@ -18,11 +18,12 @@ public class Player : MonoBehaviour
         {
             TakeDamage(5);
         }
-
-        void TakeDamage(int damage)
-        {
-            _currentHealth -= damage;
-            _healthBar.SetHealth(_currentHealth);
-        }
+    }
+    void TakeDamage(int damage)
+    {
+        _currentHealth -= damage;
+        _healthBar.SetHealth(_currentHealth);
     }
 }
+
+
