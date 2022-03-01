@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728f08ed2041b0140a4793beca21952d, type: 3}
   m_Name: Hotdog_Item
   m_EditorClassIdentifier: 
-  id: 2
-  itemName: Hot Dog
-  value: 20
-  icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  _id: 3
+  _itemName: Hot Dog
+  _value: 
+  _icon: {fileID: 0}

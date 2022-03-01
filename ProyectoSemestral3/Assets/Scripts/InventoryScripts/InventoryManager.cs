@@ -3,14 +3,15 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    public static InventoryManager _instance;
+    public static InventoryManager Instance { get; private set; }
+
     [SerializeField] private List<Item> _items = new List<Item>();
     [SerializeField] private Transform _itemContent;
     [SerializeField] private InventoryView _inventoryViewerItemPrefab;
 
     private void Awake()
     {
-        _instance = this;
+        Instance = this;
     }
 
     public void AddItem(Item item)

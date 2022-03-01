@@ -6,7 +6,7 @@ public class ItemPickUp : MonoBehaviour
 
     void Pickup()
     {
-        InventoryManager._instance.AddItem(Item);
+        InventoryManager.Instance.AddItem(Item);
         Destroy(gameObject);
     }
 
