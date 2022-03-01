@@ -3,24 +3,24 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    public static InventoryManager Instance;
-    public List<Item> items = new List<Item>();
-    public Transform _itemContent;
-    public InventoryView _inventoryViewerItemPrefab;
+    public static InventoryManager _instance;
+    [SerializeField] private List<Item> _items = new List<Item>();
+    [SerializeField] private Transform _itemContent;
+    [SerializeField] private InventoryView _inventoryViewerItemPrefab;
 
     private void Awake()
     {
-        Instance = this;
+        _instance = this;
     }
 
     public void AddItem(Item item)
     {
-        items.Add(item);
+        _items.Add(item);
     }
 
     public void Remove(Item item)
     {
-        items.Remove(item);
+        _items.Remove(item);
     }
 
     public void ListItems()
@@ -30,11 +30,13 @@ public class InventoryManager : MonoBehaviour
             Destroy(item.gameObject);
         }
 
-        foreach (var item in items)
+        foreach (var item in _items)
         {
             InventoryView itemView = Instantiate(_inventoryViewerItemPrefab, _itemContent);
             itemView.Initialize(item);
         }
     }
-
 }
+
+
+
