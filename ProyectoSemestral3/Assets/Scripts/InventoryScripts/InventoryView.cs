@@ -8,7 +8,10 @@ public class InventoryView : MonoBehaviour
 
     public void Initialize(Item item)
     {
-        _itemIcon.sprite = item.icon;
-        _itemName.text = item.itemName;
+        _itemIcon.sprite = item._icon;
+        _itemName.text = item._itemName;
     }
 }
+
+
+
