@@ -2,11 +2,16 @@ using UnityEngine;
 
 public class ItemPickUp : MonoBehaviour
 {
-    public Item Item;
+    private Item _item = null;
+
+    public void SetUpItem(Item item)
+    {
+        _item = item;
+    }
 
     void Pickup()
     {
-        InventoryManager.Instance.AddItem(Item);
+        InventoryManager.Instance.AddItem(_item);
         Destroy(gameObject);
     }
 
