@@ -3,7 +3,7 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     [SerializeField] private BoxCollider _doorCollider = default;
-    [SerializeField] private GameObject _doorMenu;
+    [SerializeField] private GameObject _doorMenu = default;
     private void OnTriggerEnter(Collider other)
     {
         other = _doorCollider;
