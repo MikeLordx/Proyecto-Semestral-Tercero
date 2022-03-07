@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class ItemController : MonoBehaviour
 {
-    [SerializeField] private Item _item;
-    [SerializeField] private BoxCollider _collider;
-    [SerializeField] private TextMesh _text;
+    [SerializeField] private Item _item = default;
+    [SerializeField] private BoxCollider _collider = default;
+    [SerializeField] private TextMesh _text = default;
     [SerializeField] private bool _isActive = default;
     [SerializeField] private ItemPickUp _itemPickUp = default;
 
@@ -31,7 +31,6 @@ public class ItemController : MonoBehaviour
         if (_isActive == true)
         {
             _text.transform.rotation = Camera.main.transform.rotation;
-
         }
     }
 }
