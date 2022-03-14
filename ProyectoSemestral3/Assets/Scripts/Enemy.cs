@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
     {
         _distance = Vector3.Distance(_player.transform.position, _collider.transform.position);
         Debug.DrawRay(transform.position, _player.transform.position.normalized * 15);
-        if (_distance < 1)
+        if (_distance < 3)
         {
             _player.TakeDamage(_iDoDamage);
         }
