@@ -12,14 +12,7 @@ public class Player : MonoBehaviour
         _healthBar.SetMaxHealth(_maxHealth);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(5);
-        }
-    }
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         _currentHealth -= damage;
         _healthBar.SetHealth(_currentHealth);
