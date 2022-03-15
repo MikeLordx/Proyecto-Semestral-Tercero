@@ -11,3 +11,4 @@ public class EnemyPathfinding : MonoBehaviour
         seeker.StartPath(transform.position, targetPosition.position);
     }
 }
+
