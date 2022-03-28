@@ -28267,6 +28267,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e48618fbdec2537478b522aba0afb4ab, type: 3}
+--- !u!20 &1330568730 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8867684570105434361, guid: fe52343616f1b5744ac43803cc5b480e, type: 3}
+  m_PrefabInstance: {fileID: 8867684569683459466}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1330870489 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: e48618fbdec2537478b522aba0afb4ab, type: 3}
@@ -29330,6 +29335,10 @@ PrefabInstance:
     - target: {fileID: 387527262142665102, guid: b254a4024bd5c2f44b83cbced98f3d3d, type: 3}
       propertyPath: m_Name
       value: EnemyLogic
+      objectReference: {fileID: 0}
+    - target: {fileID: 387527262142665102, guid: b254a4024bd5c2f44b83cbced98f3d3d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 387527262142665106, guid: b254a4024bd5c2f44b83cbced98f3d3d, type: 3}
       propertyPath: target
@@ -46937,6 +46946,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8867684570091595517, guid: fe52343616f1b5744ac43803cc5b480e, type: 3}
+      propertyPath: _cam
+      value: 
+      objectReference: {fileID: 1330568730}
     - target: {fileID: 8867684570091595517, guid: fe52343616f1b5744ac43803cc5b480e, type: 3}
       propertyPath: _deadPanel
       value: 
