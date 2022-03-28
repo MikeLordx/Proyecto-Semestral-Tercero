@@ -15,10 +15,14 @@ public class PauseMenu : MonoBehaviour
             if (_isPaused)
             {
                 _pauseMenu.SetActive(true);
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
             }
             else
             {
                 _pauseMenu.SetActive(false);
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
             }
         }
     }
