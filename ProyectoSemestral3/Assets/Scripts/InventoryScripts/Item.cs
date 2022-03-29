@@ -7,6 +7,13 @@ public class Item : ScriptableObject
     public string _itemName = default;
     public string _value = default;
     public Sprite _icon = default;
+    public ItemType _itemType = default;
+    
+    public enum ItemType
+    {
+        Key,
+        Food
+    }
 }
 
 

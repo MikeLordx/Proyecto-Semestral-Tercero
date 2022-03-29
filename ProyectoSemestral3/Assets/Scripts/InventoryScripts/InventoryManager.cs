@@ -37,6 +37,22 @@ public class InventoryManager : MonoBehaviour
             itemView.Initialize(item);
         }
     }
+
+    public void FindKey()
+    {
+        for(int i = 0; i < _items.Count; i++)
+        {
+            if (_items[2]._itemType == Item.ItemType.Key)
+            {
+                Debug.Log("Lo conseguiste");
+                _items.RemoveAt(i);
+            }
+            else
+            {
+                Debug.Log("You need to find a key");
+            }
+        }
+    }
 }
 
 
