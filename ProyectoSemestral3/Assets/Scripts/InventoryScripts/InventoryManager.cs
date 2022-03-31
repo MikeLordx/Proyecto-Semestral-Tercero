@@ -42,7 +42,7 @@ public class InventoryManager : MonoBehaviour
     {
         for(int i = 0; i < _items.Count; i++)
         {
-            if (_items[2]._itemType == Item.ItemType.Key)
+            if (_items[i]._itemType == Item.ItemType.Key)
             {
                 Debug.Log("Lo conseguiste");
                 _items.RemoveAt(i);
