@@ -3,15 +3,21 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    [SerializeField] GameObject _menu = default;
+    [SerializeField] private GameObject _puzzlePanel = default;
+    private Door _door = default;
 
     public void MoveToscene(int sceneID)
     {
         SceneManager.LoadScene(sceneID);
+        _door._yesButtonPressed = true;
     }
 
-    public void NoOption()
+    public void CloseMenu()
     {
-        _menu.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        _puzzlePanel.SetActive(false);
+        Time.timeScale = 1;
     }
 }
+

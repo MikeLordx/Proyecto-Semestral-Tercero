@@ -6,8 +6,8 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager Instance { get; private set; }
 
     [SerializeField] private List<Item> _items = new List<Item>();
-    [SerializeField] private Transform _itemContent;
-    [SerializeField] private InventoryView _inventoryViewerItemPrefab;
+    [SerializeField] private Transform _itemContent = default;
+    [SerializeField] private InventoryView _inventoryViewerItemPrefab = default;
 
     private void Awake()
     {
@@ -44,12 +44,7 @@ public class InventoryManager : MonoBehaviour
         {
             if (_items[i]._itemType == Item.ItemType.Key)
             {
-                Debug.Log("Lo conseguiste");
                 _items.RemoveAt(i);
-            }
-            else
-            {
-                Debug.Log("You need to find a key");
             }
         }
     }
