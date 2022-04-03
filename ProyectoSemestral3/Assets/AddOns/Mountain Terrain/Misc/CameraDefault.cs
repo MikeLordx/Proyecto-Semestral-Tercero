@@ -1,10 +1,8 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 public class CameraDefault : MonoBehaviour {
-	public Transform TargetLookAt;
-	public float Distance;
+	public Transform TargetLookAt = default;
+	public float Distance = default;
 	public float DistanceMin = 3.0f;
 	public float DistanceMax = 10.0f;    
 	private float mouseX = 0.0f;
