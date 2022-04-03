@@ -16,3 +16,4 @@ MonoBehaviour:
   _itemName: Hot Dog
   _value: 
   _icon: {fileID: 0}
+  _itemType: 1

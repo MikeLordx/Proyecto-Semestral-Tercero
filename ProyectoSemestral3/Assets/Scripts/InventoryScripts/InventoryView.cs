@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class InventoryView : MonoBehaviour
 {
-    public Image _itemIcon;
+    public Image _itemIcon = default;
     public Text _itemName;
 
     public void Initialize(Item item)

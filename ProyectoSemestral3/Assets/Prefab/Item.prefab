@@ -51,7 +51,6 @@ MonoBehaviour:
   _item: {fileID: 11400000, guid: 2aab9fccdfd213444bd31c1791e71687, type: 2}
   _collider: {fileID: 486250073965280780}
   _text: {fileID: 6739391914979692607}
-  _textMeshTransform: {fileID: 0}
   _isActive: 1
   _itemPickUp: {fileID: 3534127297162111787}
 --- !u!114 &3534127297162111787

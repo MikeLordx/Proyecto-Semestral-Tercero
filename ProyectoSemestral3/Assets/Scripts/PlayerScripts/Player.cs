@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
     [SerializeField] private int _currentHealth = default;
     [SerializeField] private HealthBarScript _healthBar = default;
     [SerializeField] private GameObject _deadPanel = default;
+    [SerializeField] private Camera _cam = default;
     private int _iDied = 0;
     private bool _isDead = false;
 
@@ -18,6 +19,20 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         DeadEvent();
+    }
+    private void Update()
+    {
+        Ray ray = _cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
+        RaycastHit hit;
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (Physics.Raycast(ray, out hit, 100.0f))
+            {
+                var itemPickUp = hit.collider.gameObject.GetComponent<ItemPickUp>();
+                itemPickUp.Pickup();
+            }
+        }
     }
 
     public void TakeDamage(int damage)
