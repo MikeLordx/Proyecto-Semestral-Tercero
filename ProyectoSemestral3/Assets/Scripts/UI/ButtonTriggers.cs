@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -38,7 +36,7 @@ public class ButtonTriggers : MonoBehaviour
     public void SettingsHoverExit()
     {
         _settingsText.color = Color.white;
-                _title.GetComponent<Image>().color = Color.white;
+        _title.GetComponent<Image>().color = Color.white;
         _background.GetComponent <Image>().color = Color.white;
     }    
 }
