@@ -15021,7 +15021,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _doorCollider: {fileID: 1057390288}
-  _enterPuzzleScreen: {fileID: 1011694341}
   _yesButtonPressed: 0
 --- !u!4 &1060066172 stripped
 Transform:
@@ -29571,6 +29570,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1490599596}
+    - target: {fileID: 3428284285611568257, guid: bb64ad3f1a033564d84e231eb8ba0255, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428284285794550002, guid: bb64ad3f1a033564d84e231eb8ba0255, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3428284286219050455, guid: bb64ad3f1a033564d84e231eb8ba0255, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -29649,6 +29656,10 @@ PrefabInstance:
       propertyPath: _itemContent
       value: 
       objectReference: {fileID: 482747167}
+    - target: {fileID: 5183185768085489364, guid: b8c205a8ead36e948a9d3a1548f5dd6a, type: 3}
+      propertyPath: _enterPuzzleScreen
+      value: 
+      objectReference: {fileID: 1011694341}
     - target: {fileID: 5183185768085489365, guid: b8c205a8ead36e948a9d3a1548f5dd6a, type: 3}
       propertyPath: m_RootOrder
       value: 5

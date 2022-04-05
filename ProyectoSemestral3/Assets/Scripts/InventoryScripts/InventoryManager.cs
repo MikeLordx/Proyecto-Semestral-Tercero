@@ -8,6 +8,8 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private List<Item> _items = new List<Item>();
     [SerializeField] private Transform _itemContent = default;
     [SerializeField] private InventoryView _inventoryViewerItemPrefab = default;
+    [SerializeField] private GameObject _enterPuzzleScreen = default;
+    private Door _door = default;
 
     private void Awake()
     {
@@ -44,6 +46,10 @@ public class InventoryManager : MonoBehaviour
         {
             if (_items[i]._itemType == Item.ItemType.Key)
             {
+                _enterPuzzleScreen.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                Time.timeScale = 0;
                 _items.RemoveAt(i);
             }
         }
