@@ -7,6 +7,7 @@ public class ItemController : MonoBehaviour
     [SerializeField] private TextMesh _text = default;
     [SerializeField] private bool _isActive = default;
     [SerializeField] private ItemPickUp _itemPickUp = default;
+    [SerializeField] private Camera _itemCamera = default;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -30,7 +31,7 @@ public class ItemController : MonoBehaviour
     {
         if (_isActive == true)
         {
-            _text.transform.rotation = Camera.main.transform.rotation;
+            _text.transform.rotation = _itemCamera.transform.rotation;
         }
     }
 }

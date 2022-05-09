@@ -7,11 +7,13 @@ public class CameraControl : MonoBehaviour
     [SerializeField] private float _mouseSensitivityX = default;
     [SerializeField] private float _mouseSensitivityY = default;
     [SerializeField] private Transform _player = default;
+    [SerializeField] private Transform _target = default;
     private float _xRotation = 0.0f;
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        transform.LookAt(_target);
     }
 
     private void Update()
