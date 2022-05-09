@@ -17015,8 +17015,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66bfdfecb888ed8479b061af18c72420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mouseSensitivityX: 150
-  _mouseSensitivityY: 150
+  _mouseSensitivityX: 300
+  _mouseSensitivityY: 300
   _player: {fileID: 951343988}
   _target: {fileID: 1443526671}
 --- !u!81 &1200614643
