@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -13,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _groundDistance = 0.4f;
     [SerializeField] private LayerMask _groundMask = default;
     [SerializeField] private float _jumpHeight = 3f;
+    [SerializeField] private AudioSource _audioSource = default;
     private bool _isGrounded = default;
     Vector3 _velocity = default;
 
@@ -37,6 +36,15 @@ public class PlayerMovement : MonoBehaviour
 
         float xAxis = Input.GetAxis("Horizontal");
         float zAxis = Input.GetAxis("Vertical");
+
+        if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+        {
+            _audioSource.Play();
+        }
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
+        {
+            _audioSource.Stop();
+        }
 
         Vector3 move = transform.right * xAxis + transform.forward * zAxis;
         _controller.Move(move * _speed * Time.deltaTime);
