@@ -5718,6 +5718,34 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1000013628716364, guid: ee5ce8c8eaa133d43a291b519c442236, type: 3}
   m_PrefabInstance: {fileID: 1645631941}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1327250310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327250309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a9c79f0b578654689fd441e45c1db8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _doorCollider: {fileID: 1327250311}
+  _enterPuzzleScreen: {fileID: 1529252708}
+  _yesButtonPressed: 0
+--- !u!65 &1327250311
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327250309}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.958252, y: 2.1361256, z: 3.4276323}
+  m_Center: {x: -0.558264, y: 0, z: -0.8261808}
 --- !u!82 &1327250313
 AudioSource:
   m_ObjectHideFlags: 0
