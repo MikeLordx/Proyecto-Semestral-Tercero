@@ -24,7 +24,7 @@ public class ItemController : MonoBehaviour
     private void Start()
     {
         _itemPickUp.SetUpItem(_item);
-        _text.text = _item._itemName;
+        _text.text = _item.itemName;
     }
 
     private void Update()
