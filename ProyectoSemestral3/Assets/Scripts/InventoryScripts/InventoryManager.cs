@@ -8,7 +8,9 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private List<Item> _items = new List<Item>();
     [SerializeField] private Transform _itemContent = default;
     [SerializeField] private InventoryView _inventoryViewerItemPrefab = default;
+    [SerializeField] private GameObject _cardCanvas = default;
     private Door _door = default;
+    private Item _itemEnum = default;
 
     private void Awake()
     {
@@ -43,13 +45,23 @@ public class InventoryManager : MonoBehaviour
     {
         for(int i = 0; i < _items.Count; i++)
         {
-            if (_items[i]._itemType == Item.ItemType.Key)
+            if (_items[i].itemType == Item.ItemType.Key)
             {
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 Time.timeScale = 0;
                 _items.RemoveAt(i);
             }
+        }
+    }
+
+    public void OpenCard()
+    {
+        switch(_itemEnum.itemType)
+        {
+            case Item.ItemType.Card:
+                _cardCanvas.SetActive(true);
+                break;
         }
     }
 }

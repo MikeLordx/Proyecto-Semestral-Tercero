@@ -195,10 +195,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.7189361
+  m_Radius: 0.43560982
+  m_Height: 1.7189362
   m_Direction: 1
-  m_Center: {x: 0, y: 0.90584797, z: 0}
+  m_Center: {x: 0.019539425, y: 0.905848, z: 0}
 --- !u!114 &387527260769180287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,6 +211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3959d0a3a52c3d44bd55b2f26d51b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _iDoDamage: 2
+  _iDoDamage: 1
   _collider: {fileID: 387527260769180280}
   _player: {fileID: 0}
