@@ -14631,7 +14631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 387527262142665102, guid: b254a4024bd5c2f44b83cbced98f3d3d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 387527262142665106, guid: b254a4024bd5c2f44b83cbced98f3d3d, type: 3}
       propertyPath: target
@@ -22309,8 +22309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66bfdfecb888ed8479b061af18c72420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mouseSensitivityX: 300
-  _mouseSensitivityY: 300
+  _mouseSensitivityX: 400
+  _mouseSensitivityY: 400
   _player: {fileID: 1892134057}
   _target: {fileID: 1962190604}
 --- !u!81 &1333795187
@@ -23447,9 +23447,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8867684570091595519, guid: fe52343616f1b5744ac43803cc5b480e, type: 3}
+      propertyPath: _speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8867684570091595519, guid: fe52343616f1b5744ac43803cc5b480e, type: 3}
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 1533359180}
+    - target: {fileID: 8867684570091595519, guid: fe52343616f1b5744ac43803cc5b480e, type: 3}
+      propertyPath: _playerSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8867684570091595519, guid: fe52343616f1b5744ac43803cc5b480e, type: 3}
+      propertyPath: _runningSpeed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8867684570095245525, guid: fe52343616f1b5744ac43803cc5b480e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0

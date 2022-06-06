@@ -18138,8 +18138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66bfdfecb888ed8479b061af18c72420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mouseSensitivityX: 600
-  _mouseSensitivityY: 600
+  _mouseSensitivityX: 400
+  _mouseSensitivityY: 400
   _player: {fileID: 951343988}
   _target: {fileID: 1443526671}
 --- !u!81 &1200614643
@@ -32520,9 +32520,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8867684570091595519, guid: fe52343616f1b5744ac43803cc5b480e, type: 3}
+      propertyPath: _speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8867684570091595519, guid: fe52343616f1b5744ac43803cc5b480e, type: 3}
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 398962978}
+    - target: {fileID: 8867684570091595519, guid: fe52343616f1b5744ac43803cc5b480e, type: 3}
+      propertyPath: _playerSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8867684570091595519, guid: fe52343616f1b5744ac43803cc5b480e, type: 3}
+      propertyPath: _runningSpeed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8867684570105434367, guid: fe52343616f1b5744ac43803cc5b480e, type: 3}
       propertyPath: _mouseSensitivityX
       value: 800
