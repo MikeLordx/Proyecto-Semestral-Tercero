@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask _groundMask = default;
     [SerializeField] private float _jumpHeight = 3f;
     [SerializeField] private AudioSource _audioSource = default;
-    private bool _isGrounded = default;
+   [SerializeField] private bool _isGrounded = default;
     Vector3 _velocity = default;
 
     private void Update()
